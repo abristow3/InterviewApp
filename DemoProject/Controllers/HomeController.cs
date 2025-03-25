@@ -20,8 +20,8 @@ namespace DemoProject.Controllers
         {
             var questions = new List<Question>
             {
-                new Question { Id = 1, QuestionText = "What is a scoped service?", Answer = "A service that can be used per request." },
-                new Question { Id = 2, QuestionText = "What does MVC stand for?", Answer = "Model View Controller" }
+                new Question { Id = 1, QuestionText = "What is a scoped service?", Answer = "A service that can be used per request.", Hint = "A hint about a scoped service." },
+                new Question { Id = 2, QuestionText = "What does MVC stand for?", Answer = "Model View Controller", Hint = "A hint about MVC." }
             };
             return Ok(questions);
         }

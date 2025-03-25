@@ -6,7 +6,9 @@
     <h1 class="display-4">Questions</h1>
     <div class="custom-vstack" data-bind="foreach: questions">
         <div class="custom-hstack">
-            <span data-bind="text: Text"></span>
+            <span data-bind="text: QuestionText, attr: { title: Hint }"></span>
+            <span data-bind="text: Answer, visible: showAnswer"></span>
+            <button data-bind="text: showAnswer() ? 'Hide Answer' : 'Show Answer', click: toggleAnswer"></button>
         </div>
     </div>
     
